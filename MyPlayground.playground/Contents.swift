@@ -93,8 +93,29 @@ optionalCar?.description()
 //can either be none or a string
 
 
+//CLOSURES
 
+let countStringChars = { (test: String) -> Int in
+    return test.characters.count
+}
+countStringChars("Test")
 
+let events = (0..<10).filter { (value) -> Bool in
+    return value % 2 == 0
+}
+let simplerEvens = (0..<10).filter {$0 % 2 == 0}
+print(simplerEvens)
+
+let unsortedArray = ["troy", "abed", "jeff", "britta"]
+//let sortedArray = unsortedArray.sorted { $0 > $1 }
+//sortedArray
+//let reverseSortedArray = unsortedArray.sorted(by: <)
+//reverseSortedArray
+
+let π = 3.14159
+π
+let 🔫 = "revolver"
+print(🔫)
 
 
 
