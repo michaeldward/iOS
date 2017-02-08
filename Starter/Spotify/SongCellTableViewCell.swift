@@ -10,6 +10,12 @@ import UIKit
 
 class SongCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var AlbumImage: UIImageView!
+    
+    @IBOutlet weak var SongName: UILabel!
+    
+    @IBOutlet weak var ArtistName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +26,4 @@ class SongCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

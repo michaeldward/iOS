@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwm-pY-D2I">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eTm-cU-8Bu"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xcj-JV-9uW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Z1I-2k-cZs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QAh-aV-gUU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rwm-pY-D2I" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7sO-DI-P7q"/>
+                            <constraint firstItem="xcj-JV-9uW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GSq-wl-gEc"/>
+                            <constraint firstItem="xcj-JV-9uW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ILV-oM-gFK"/>
+                            <constraint firstItem="rwm-pY-D2I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y2n-hB-jRu"/>
+                            <constraint firstItem="xcj-JV-9uW" firstAttribute="top" secondItem="rwm-pY-D2I" secondAttribute="bottom" symbolic="YES" id="aLw-fm-o3q"/>
+                            <constraint firstItem="rwm-pY-D2I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hIC-O1-BQv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xcj-JV-9uW" secondAttribute="bottom" id="pR9-Th-Qtz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="xcj-JV-9uW" id="5pl-4h-b8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+</document>
