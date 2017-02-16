@@ -10,6 +10,10 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var titleField: UITextField!
+
+    @IBOutlet weak var textField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +26,7 @@ class AddViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +34,6 @@ class AddViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

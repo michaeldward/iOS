@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     var tableData = [Note]()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +28,14 @@ class ViewController: UIViewController {
 
     @IBAction func unwindToMainMenu(_ sender: UIStoryboardSegue) {
         
+       if sender.identifier == "saveSegue" {
+            print("hey guys")
+            if let addVC = sender.source as? AddViewController {
+                let newNote = Note(newTitle: addVC.titleField.text!, newText: addVC.textField.text!)
+                tableData.append(newNote)
+                tableView.reloadData()
+            }
+        }
     }
 
 }
